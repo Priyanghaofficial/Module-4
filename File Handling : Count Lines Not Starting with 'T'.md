@@ -14,19 +14,19 @@ To write a Python program that counts the number of lines in a text file `story.
 
 ## 🧾 Program
 ```
-def returnSum(myDict):
-    final=0
-    for i in myDict.values():
-        final+=i
-    return final
-#driver functions
+with open("story.txt", "r") as file:
+    count = 0
+    for line in file:
+        if not line.lstrip().startswith('T'):
+            count += 1
 
-myDict = {'a': 100, 'b': 200, 'c': 300}
-print("Sum :",returnSum(myDict))
+print("Number of lines that do not start with 'T':", count)
+
 ```
 
 ## Output
-![Screenshot (148)](https://github.com/user-attachments/assets/584ecff1-9dfb-4670-b1c8-ee354a85ed3d)
+![image](https://github.com/user-attachments/assets/dd9a2f7f-72b1-4e17-a382-60f77e2d92aa)
+
 
 ## Result
 Thus,the program has been executed successfully.
